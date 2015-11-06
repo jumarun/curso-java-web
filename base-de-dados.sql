@@ -78,3 +78,9 @@ CREATE TABLE IF NOT EXISTS `curso-java-web`.`anuncio` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `regiao` (
+  `id_regiao` bigint(20) NOT NULL,
+  `nome` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_regiao`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
