@@ -8,6 +8,7 @@ import javax.persistence.Persistence;
 
 import br.com.tutorial.model.entity.Anuncio;
 import br.com.tutorial.model.entity.Categoria;
+import br.com.tutorial.model.entity.Regiao;
 import br.com.tutorial.model.entity.UF;
 
 /**
@@ -31,6 +32,11 @@ public class CadastroDAO {
 	public List<UF> getUfs(){
 		List ufs = getEntityManager().createQuery("from UF").getResultList();
 		return ufs;
+	}
+	
+	public List<Regiao> getRegiao(){
+		List regiao = getEntityManager().createQuery("from Regiao").getResultList();
+		return regiao;
 	}
 	
 	public List<Categoria> getCategorias(){

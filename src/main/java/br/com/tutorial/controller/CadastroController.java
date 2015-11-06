@@ -9,6 +9,7 @@ import javax.faces.bean.ManagedBean;
 import br.com.tutorial.model.CadastroDTO;
 import br.com.tutorial.model.dao.CadastroDAO;
 import br.com.tutorial.model.entity.Categoria;
+import br.com.tutorial.model.entity.Regiao;
 import br.com.tutorial.model.entity.UF;
 
 
@@ -40,6 +41,11 @@ public class CadastroController implements Serializable {
 	public List<Categoria> getCategorias(){
 		CadastroDAO dao = new CadastroDAO();
 		return dao.getCategorias();
+	}
+	
+	public List<Regiao> getRegiao(){
+		CadastroDAO dao = new CadastroDAO();
+		return dao.getRegiao();
 	}
 	
 	public String salvar(){

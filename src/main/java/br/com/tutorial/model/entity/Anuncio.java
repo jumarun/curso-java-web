@@ -18,7 +18,7 @@ public class Anuncio implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_anuncio")
 	private Long id;
 
@@ -34,6 +34,10 @@ public class Anuncio implements Serializable {
 	@ManyToOne
 	@JoinColumn(referencedColumnName="id_categoria", name="id_categoria")
 	private Categoria categoria;
+	
+	@ManyToOne
+	@JoinColumn(referencedColumnName="id_regiao", name="id_regiao")
+	private Regiao regiao;
 
 	public Long getId() {
 		return id;
@@ -73,6 +77,14 @@ public class Anuncio implements Serializable {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public Regiao getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(Regiao regiao) {
+		this.regiao = regiao;
 	}
 
 	@Override
